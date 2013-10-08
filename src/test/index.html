@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Welcome to TwoDogBrew.com</title>
+    <script type="text/javascript" src="scripts/jquery-latest.js"></script>
+    <script type="text/javascript">
+
+        function showTab(id){
+            if(id=='1')
+            {
+                $("#tab2content").slideUp(500);
+                $("#tab3content").slideUp(500);
+                setTimeout("$('#tab1content').slideDown(500)",500);
+
+            }
+            else if(id=='2')
+            {
+                $("#tab1content").slideUp(500);
+                $("#tab3content").slideUp(500);
+                setTimeout("$('#tab2content').slideDown(500)",500);
+//                $("#tab2content").slideDown(1000);
+            }
+            else if(id=='3')
+            {
+                $("#tab2content").slideUp(500);
+                $("#tab1content").slideUp(500);
+                setTimeout("$('#tab3content').slideDown(500)",500);
+//                $("#tab3content").slideDown(1000);
+            }
+
+        }
+    </script>
+    
+
+<style type="text/css">
+        
+html,body
+        
+{
+            
+background: url("background.png") repeat-x;
+height: 100%; 
+margin: 0 0; 
+padding: 0 0;
+
+ /*fixed center center;
+            
+-o-background-size: 100%,100%, auto;
+            -moz-background-size: 100%, 100%, auto;
+            
+-webkit-background-size: 100%, 100%, auto;
+            background-size: 100%, 100%, auto;
+*/        
+}
+        
+
+div
+        
+{
+            
+background-color: black;
+            
+color: #f5f5f5;
+        
+}
+    
+</style>
+
+</head>
+<body>
+        <div id="tab1" style="display: inline;" onclick="showTab('1')">TAB 1</div>
+        <div id="tab2" style="display: inline;" onclick="showTab('2')">TAB 2</div>
+        <div id="tab3" style="display: inline;" onclick="showTab('3')">TAB 3</div>
+        <div id="tab1content">TAB 1 <br/><br/><br/><br/><br/></div>
+        <div id="tab2content" style="display: none;">TAB 2<br/><br/><br/><br/><br/></div>
+        <div id="tab3content" style="display: none;">TAB 3<br/><br/><br/><br/><br/></div>
+</body>
+</html>

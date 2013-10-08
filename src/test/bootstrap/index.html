@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap demo take 1.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<br>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div id="side" class="span2"> 
+				<ul class="nav nav-tabs nav-stacked">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Deviate</a></li>
+				</ul>	
+			</div>
+			<div id="cont" class="span8">
+
+				<div class="progress progress-striped active">
+				  <div id="progress" class="bar" style="width: 0%;"></div>
+				</div>
+				<div id="myCar" class="carousel slide">
+					<div class="carousel-inner">
+						<div class="active item">
+							<img src="pic/gabenbeard.jpeg">
+							<div class="carousel-caption">
+								<h4>Our dearest</h4>
+								<p>He is Leader</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="pic/gaben.png">
+							<div class="carousel-caption">
+								<h4>The Gaben</h4>
+								<p>He is Pleased</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="pic/durantula.jpg">
+						</div>
+					</div>
+
+					<a href="#myCar" class="carousel-control left" data-slide="prev">&lsaquo;</a>
+					<a href="#myCar" class="carousel-control right" data-slide="next">&rsaquo;</a>
+
+				</div>
+				
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary btn-mini">Save changes</button>
+  					<button type="button" class="btn btn-mini">Cancel</button>
+				</div>
+				<dl>
+					<dt>Word</dt>
+						<dd>a single distinct meaningful element of speech or writing, used with others (or sometimes alone) to form a sentence and typically shown with a space on either side when written or printed.</dd>
+					<dt>Definition</dt>
+						<dd>a statement of the exact meaning of a word, esp. in a dictionary.</dd>
+				</dl>	
+
+				<div class="pull-right">
+					<p>A great man once said:
+						<blockquote class="pull-right">Some great words... <br>
+						<small class="muted">A great man</small>
+						</blockquote>		
+					</p>
+				</div>
+
+
+				<address>
+					<strong>Chris Gibson</strong> <br>
+					1234 Main St. <br>
+					Tulsa, OK 74133	<br>
+					<abbr title="Phone">P:</abbr> (123) 456-7678
+				</address>
+
+
+				<p class="lead">This is a paragraph that has a lead standout.</p>
+				<p class="muted"><small>This is legal jargon.</small></p>
+				<abbr title="attribute">attr</abbr>
+
+
+
+			</div>
+		</div>
+
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready( function() {
+			var total = 100;
+			var processed = 0;
+
+			var progress = setInterval(function() {
+			    var $bar = $('#progress');
+			    var perc = 0;
+			    if(processed<=total) perc = Math.round((processed/total) * 100);
+
+			    if (processed>total) {
+			        clearInterval(progress);
+			        $('.progress').removeClass('active');
+			    } else {
+			        $bar.width(perc + '%');
+			        $bar.text(perc + "%");
+			    }
+
+			    processed += 1;
+			}, 50);
+
+
+		});
+	</script>
+</body>
+</html>
