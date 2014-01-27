@@ -1,5 +1,6 @@
-var express = require("express");
+var express = require('express');
 var app = express();
+var path = require('path');
 app.use(express.logger());
 
 var publicDir = path.join(path.dirname(__dirname), '/public/');
